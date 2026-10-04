@@ -324,7 +324,65 @@
           <footer>© 2026 Arnawan Dwi Nugraha · Data Analyst</footer>
         </div>
       </section>
-    </main>
+    
+<section class="journey-section" id="content" aria-labelledby="journey-title">
+  <div class="section-kicker">MY LEARNING JOURNEY / CONTENT</div>
+  <div class="section-heading-row">
+    <div>
+      <h2 id="journey-title">Learning in public, one project at a time.</h2>
+      <p class="section-intro">A few snapshots from my learning journey, projects, and data-analysis content.</p>
+    </div>
+    <a class="text-link" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">View Instagram ↗</a>
+  </div>
+  <div class="journey-grid">
+    <article class="journey-card">
+      <a class="journey-thumb" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram/journey-1.png" alt="Arnawan's data learning journey on Instagram" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x500/1e1e1e/ffffff?text=Instagram+Journey';">
+      </a>
+      <div class="journey-card-body"><span class="card-label">DATA JOURNEY</span><h3>From Python Fundamentals to Data Analysis</h3><p>Documenting the transition from Python fundamentals into practical data analysis and portfolio projects.</p><a class="secondary-button" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">View on Instagram ↗</a></div>
+    </article>
+    <article class="journey-card">
+      <a class="journey-thumb" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram/journey-2.png" alt="Arnawan's SQL learning content on Instagram" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x500/1e1e1e/ffffff?text=SQL+Journey';">
+      </a>
+      <div class="journey-card-body"><span class="card-label">SQL + ANALYTICS</span><h3>Turning Business Questions into SQL</h3><p>Sharing practical SQL exercises and portfolio work built around customer, order, and business questions.</p><a class="secondary-button" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">View on Instagram ↗</a></div>
+    </article>
+    <article class="journey-card">
+      <a class="journey-thumb" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram/journey-3.png" alt="Arnawan's Power BI and dashboard content on Instagram" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x500/1e1e1e/ffffff?text=Power+BI+Journey';">
+      </a>
+      <div class="journey-card-body"><span class="card-label">POWER BI</span><h3>Building Dashboards That Answer Questions</h3><p>Exploring Power BI, Power Query, DAX, and data visualization through hands-on projects and learning notes.</p><a class="secondary-button" href="https://www.instagram.com/nugrahtheanalyst/" target="_blank" rel="noopener noreferrer">View on Instagram ↗</a></div>
+    </article>
+  </div>
+</section>
+
+
+<section class="resource-banner" id="excel-challenge" aria-labelledby="excel-resource-title">
+  <div class="resource-copy"><span class="resource-badge">FEATURED RESOURCE 🔥</span><h2 id="excel-resource-title">Featured Resource: Excel Obstacle Course</h2><p>An interactive practice challenge designed to master essential Excel functions, formulas, and data analysis workflows.</p></div>
+  <a class="primary-button" href="http://lynk.id/bacainugrah/e4z978zzwy28" target="_blank" rel="noopener noreferrer">Get the Challenge on Lynk.id ↗</a>
+</section>
+
+
+<section class="featured-project-section" id="featured-project" aria-labelledby="cinema-title">
+  <div class="section-kicker">FEATURED PROJECT</div>
+  <div class="featured-project-card">
+    <button class="project-preview-trigger" type="button" data-project-image="assets/projects/cinema-dashboard.png" data-project-alt="Cinema Sales Analytics Dashboard" aria-label="Preview Cinema Sales Analytics Dashboard">
+      <img src="assets/projects/cinema-dashboard.png" alt="Cinema Sales Analytics Dashboard" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x750/1e1e1e/ffffff?text=Cinema+Dashboard+Preview+Unavailable';">
+      <span class="image-overlay">Preview Dashboard ↗</span>
+    </button>
+    <div class="featured-project-copy">
+      <span class="project-tag">POWER BI · DAX · POWER QUERY · DATA VISUALIZATION</span>
+      <h2 id="cinema-title">Cinema Sales Analytics Dashboard</h2>
+      <p>Designed an interactive cinema analytics dashboard processing over 20,000 transaction records. Uncovered key revenue drivers, ticket sales trends across movie genres, and customer payment channel preferences to optimize sales strategy.</p>
+      <div class="project-actions">
+        <button class="secondary-button project-modal-button" type="button" data-project-image="assets/projects/cinema-dashboard.png" data-project-alt="Cinema Sales Analytics Dashboard">Preview Dashboard</button>
+        <a class="primary-button" href="https://www.linkedin.com/feed/update/urn:li:activity:7511255250431979520/" target="_blank" rel="noopener noreferrer">Watch Video Demo ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
   </div>
 
     <script>
@@ -424,5 +482,48 @@
         });
       })();
     </script>
+
+<div id="projectModal" class="image-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Cinema Sales Analytics Dashboard preview">
+  <div class="image-modal-backdrop" data-close-project-modal></div>
+  <div class="image-modal-panel">
+    <button class="modal-close" type="button" data-close-project-modal aria-label="Close dashboard preview">×</button>
+    <img id="projectModalImage" src="" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x750/1e1e1e/ffffff?text=Dashboard+Preview+Unavailable';">
+  </div>
+</div>
+<script>
+(() => {
+  const modal = document.getElementById('projectModal');
+  if (!modal) return;
+  const image = document.getElementById('projectModalImage');
+  const close = modal.querySelector('.modal-close');
+  let lastFocus = null;
+  const open = trigger => {
+    lastFocus = trigger;
+    image.src = trigger.dataset.projectImage || '';
+    image.alt = trigger.dataset.projectAlt || 'Dashboard preview';
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+    close.focus();
+  };
+  const shut = () => {
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+    if (lastFocus) lastFocus.focus();
+  };
+  document.addEventListener('click', e => {
+    const trigger = e.target.closest('[data-project-image]');
+    if (trigger) { e.preventDefault(); open(trigger); }
+    if (e.target.closest('[data-close-project-modal]')) shut();
+  });
+  document.addEventListener('keydown', e => {
+    const trigger = e.target.closest('[data-project-image]');
+    if (trigger && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); open(trigger); }
+    if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); shut(); }
+  });
+})();
+</script>
+
 </body>
 </html>
