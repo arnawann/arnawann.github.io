@@ -1,9 +1,2 @@
-Certificate assets included from the files uploaded in this conversation:
-- powerbi-cert.png
-- python-cert.png
-
-The SQL, Bootcamp Data Analyst, and MS Office image paths are already wired in index.html:
-- sql-cert.png
-- bootcamp-da-cert.png
-- msoffice-cert.png
-Add the remaining three original certificate images to this folder using those exact filenames.
+Certificate images (WebP). Full size = *.webp (opened in the modal), card thumbnail = *-thumb.webp.
+To add a new certificate: put both files here, then copy one <article class="ach-card"> block in index.html.
